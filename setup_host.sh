@@ -1,7 +1,7 @@
 #!/bin/bash
 
 apt update
-sudo apt install nfs-common
+apt install -y nfs-common
 mkdir -p /var/nfs/keys
 
 while [! -f /var/nfs/keys/id_rsa ]; do
