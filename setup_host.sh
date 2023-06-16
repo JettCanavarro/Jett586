@@ -11,4 +11,4 @@ done
 
 cp /var/nfs/keys/id_rsa* /users/jc997541/.ssh/
 chown jc997541: /users/jc997541/.ssh/id_rsa*
-runuser -u jc997541  -- cat /users/jc997541.ssh/id_rsa.pub >> /users/jc997541/.ssh/authorized_keys
+runuser -u jc997541 -- cat /users/jc997541/.ssh/id_rsa.pub >> /users/jc997541/.ssh/authorized_keys
