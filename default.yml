@@ -1,6 +1,6 @@
 ---
 mysql_root_password: "password123"
-app_user: "lngo:
+app_user: "jc997541"
 http_host: "HOSTNAME"
 http_conf: "HOSTNAME"
 http_port: "80"
