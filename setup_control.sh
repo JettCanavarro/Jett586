@@ -19,10 +19,16 @@ apt update
 apt install -y ansible
 cp /local/repository/hosts /etc/ansible
 
+#configure to disable strict hostkey checking
+echo "[defaults]" | sudo tee -a /etc/ansible/ansible.cfg
+echo "host_key_checking = False" | sudo tee -a /etc/ansible/ansible.cfg
+
+# setup lamp
+runuser -u jc997541 -- bash /local/repository/setup_ansible.sh
 #setup lamp
-git clone https://github.com/do-community/ansible-playbooks.git
-cd ansible-playbooks/lamp_ubuntu1804/
-cp /local/repository/default.yml vars/
-HOST=$(hostname -f)
-sed -i "s/HOSTNAME/$HOST/g" vars/default.yml
-ansible-playbook playbook.yml -l server1 -u jc997541
+#git clone https://github.com/do-community/ansible-playbooks.git
+#cd ansible-playbooks/lamp_ubuntu1804/
+#cp /local/repository/default.yml vars/
+#HOST=$(hostname -f)
+#sed -i "s/HOSTNAME/$HOST/g" vars/default.yml
+#ansible-playbook playbook.yml -l server1 -u jc997541
