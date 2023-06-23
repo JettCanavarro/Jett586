@@ -6,7 +6,7 @@ runuser -u jc997541 -- cat /users/jc997541/.ssh/id_rsa.pub >> /users/jc997541/.s
 
 #setup nfs for key sharing
 apt update
-apt install nfs-kernel-server
+apt install -y nfs-kernel-server
 mkdir /var/nfs/keys -p
 cp /users/jc997541/.ssh/id_rsa* /var/nfs/keys
 chown nobody:nogroup /var/nfs/keys
